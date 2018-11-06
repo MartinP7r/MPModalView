@@ -1,0 +1,6 @@
+framework module MPModalView {
+  umbrella header "MPModalView-umbrella.h"
+
+  export *
+  module * { export * }
+}

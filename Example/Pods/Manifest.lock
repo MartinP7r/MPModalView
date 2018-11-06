@@ -1,0 +1,16 @@
+PODS:
+  - MPModalView (0.1.0)
+
+DEPENDENCIES:
+  - MPModalView (from `../`)
+
+EXTERNAL SOURCES:
+  MPModalView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MPModalView: 87a0dc1de53185b350059b14f05b59c583f297dd
+
+PODFILE CHECKSUM: e27a22a5ef04ed87e6b54c9c77128b052f81a99f
+
+COCOAPODS: 1.5.3

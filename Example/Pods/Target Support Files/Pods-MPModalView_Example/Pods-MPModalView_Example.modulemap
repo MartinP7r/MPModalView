@@ -1,0 +1,6 @@
+framework module Pods_MPModalView_Example {
+  umbrella header "Pods-MPModalView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
