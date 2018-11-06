@@ -1,6 +1,5 @@
 # MPModalView
 
-[![CI Status](https://img.shields.io/travis/cyrus86/MPModalView.svg?style=flat)](https://travis-ci.org/cyrus86/MPModalView)
 [![Version](https://img.shields.io/cocoapods/v/MPModalView.svg?style=flat)](https://cocoapods.org/pods/MPModalView)
 [![License](https://img.shields.io/cocoapods/l/MPModalView.svg?style=flat)](https://cocoapods.org/pods/MPModalView)
 [![Platform](https://img.shields.io/cocoapods/p/MPModalView.svg?style=flat)](https://cocoapods.org/pods/MPModalView)
@@ -22,7 +21,7 @@ pod 'MPModalView'
 
 ## Author
 
-cyrus86, martin@disco.co.jp
+Martin Pfundmair, github@mycyrus.com
 
 ## License
 

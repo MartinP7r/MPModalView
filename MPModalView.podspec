@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MPModalView'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A custom modal view with multiple buttons.'
 
 # This description is used to generate tags and improve search results.
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/cyrus86/MPModalView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'cyrus86' => 'github@mycyrus.com' }
+  s.author           = { 'Martin Pfundmair' => 'github@mycyrus.com' }
   s.source           = { :git => 'https://github.com/cyrus86/MPModalView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
