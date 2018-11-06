@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MPModalView
 
 class ViewController: UIViewController {
 
