@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MPModalView_Example' do
+  pod 'MPModalView', :path => '../'
+
+  target 'MPModalView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
