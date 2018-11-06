@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let popOver = PopoverVC(actionButtons: [ActionButton(type: .basic(title: "Bla")), ActionButton(type: .cancel),ActionButton(type: .basic(title: "Blu"))], contentView: .text(title: "A", body: "B"))
+
+        popOver.presentOnTop()
     }
 
     override func didReceiveMemoryWarning() {

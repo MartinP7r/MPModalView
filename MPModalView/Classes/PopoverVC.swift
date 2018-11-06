@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PopoverVC: UIViewController {
+public class PopoverVC: UIViewController {
 
-    enum ContentViewType { case
+    public enum ContentViewType { case
         text(title: String, body: String),
         custom(UIView)
     }
@@ -26,7 +26,7 @@ class PopoverVC: UIViewController {
     private(set) var buttons: [ActionButton]
 
     // MARK: - Initialization
-    init(actionButtons: [ActionButton],
+    public init(actionButtons: [ActionButton],
          contentView: ContentViewType,
          hasShadow: Bool = true) {
         self.buttons = actionButtons
@@ -40,13 +40,13 @@ class PopoverVC: UIViewController {
             let lblTitle = UILabel()
             lblTitle.text = title
             lblTitle.numberOfLines = 0
-            lblTitle.font = Style.font(.bold, size: .large)
+//            lblTitle.font = Style.font(.bold, size: .large)
             lblTitle.textAlignment = .center
             lblTitle.setContentHuggingPriority(.defaultHigh, for: .vertical)
 
             let lblBody = UILabel()
             lblBody.numberOfLines = 0
-            lblBody.font = Style.font(.basic, size: .standard)
+//            lblBody.font = Style.font(.basic, size: .standard)
             lblBody.text = body
             lblBody.setContentHuggingPriority(.defaultHigh, for: .vertical)
 
@@ -59,7 +59,7 @@ class PopoverVC: UIViewController {
             stackView.distribution = .fill
             stackView.spacing = 5
             self.contentView.addSubview(stackView)
-            stackView.fillSuperview(padding: .init(onAllSidesWithSize: 10))
+            stackView.fillSuperview(padding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         }
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .clear
@@ -71,13 +71,13 @@ class PopoverVC: UIViewController {
     required init?(coder aDecoder: NSCoder) { return nil }
 
     // MARK: - ViewController LifeCycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .overCurrentContext
         setupSubViews()
     }
 
-    override internal func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         guard let location = touch?.location(in: view) else { return }
         if !shadowView.frame.contains(location) {
@@ -90,7 +90,7 @@ class PopoverVC: UIViewController {
     func presentOnTop() {
         let alertWindow = UIWindow(frame: UIScreen.main.bounds)
         alertWindow.rootViewController = UIViewController()
-        alertWindow.windowLevel = UIWindow.Level.alert + 1
+        alertWindow.windowLevel =  UIWindow.Level.alert + 1.0
         alertWindow.makeKeyAndVisible()
 
         alertWindow.rootViewController?.present(self,

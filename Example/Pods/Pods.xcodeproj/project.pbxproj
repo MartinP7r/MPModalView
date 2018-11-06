@@ -10,6 +10,8 @@
 		08DD510866DDA94C1F72D3C1BB1BCB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		399AD6C921915A3200471D4C /* PopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6C721915A3200471D4C /* PopoverVC.swift */; };
 		399AD6CA21915A3200471D4C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6C821915A3200471D4C /* ActionButton.swift */; };
+		399AD6CD21916FF300471D4C /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */; };
+		399AD6CE21916FF300471D4C /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6CC21916FF300471D4C /* UIView+Anchors.swift */; };
 		7EC07C965E0C91D821E3FA4828E4A5A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		8EC2F8455BB6B8866148427CBAE5D178 /* Pods-MPModalView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4F21437B8794BA2E76C585610B2EB55 /* Pods-MPModalView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99A83F91A681A1242A28A47685C8AB16 /* MPModalView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8EF01626F6DE62D0BF40B27627961F /* MPModalView-dummy.m */; };
@@ -45,6 +47,8 @@
 		264E1E8C6275D64C9E1592D31B1BF4E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		399AD6C721915A3200471D4C /* PopoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverVC.swift; path = MPModalView/Classes/PopoverVC.swift; sourceTree = "<group>"; };
 		399AD6C821915A3200471D4C /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = MPModalView/Classes/ActionButton.swift; sourceTree = "<group>"; };
+		399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+SafeArea.swift"; path = "MPModalView/Classes/UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		399AD6CC21916FF300471D4C /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Anchors.swift"; path = "MPModalView/Classes/UIView+Anchors.swift"; sourceTree = "<group>"; };
 		3BE065A0748EA84312B78D8A9BFB74A6 /* Pods-MPModalView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MPModalView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4AF66BCCD307E9835EA35C5740287E7F /* Pods-MPModalView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MPModalView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4B9E8754DE0F0FDC03E91E50EDB67657 /* MPModalView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = MPModalView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -187,6 +191,8 @@
 			children = (
 				399AD6C821915A3200471D4C /* ActionButton.swift */,
 				399AD6C721915A3200471D4C /* PopoverVC.swift */,
+				399AD6CC21916FF300471D4C /* UIView+Anchors.swift */,
+				399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */,
 				2A72B2035A7ABEAC49CED74792FB770E /* Pod */,
 				4A76FFD050B78CEFC3EE42D89F17BA6D /* Support Files */,
 			);
@@ -386,7 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				399AD6CD21916FF300471D4C /* UIView+SafeArea.swift in Sources */,
 				399AD6C921915A3200471D4C /* PopoverVC.swift in Sources */,
+				399AD6CE21916FF300471D4C /* UIView+Anchors.swift in Sources */,
 				99A83F91A681A1242A28A47685C8AB16 /* MPModalView-dummy.m in Sources */,
 				399AD6CA21915A3200471D4C /* ActionButton.swift in Sources */,
 			);
@@ -630,7 +638,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MPModalView/MPModalView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MPModalView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MPModalView/MPModalView.modulemap";
 				PRODUCT_MODULE_NAME = MPModalView;
@@ -663,7 +671,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MPModalView/MPModalView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MPModalView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MPModalView/MPModalView.modulemap";
 				PRODUCT_MODULE_NAME = MPModalView;

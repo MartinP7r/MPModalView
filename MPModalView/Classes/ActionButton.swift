@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActionButton: UIButton {
+public class ActionButton: UIButton {
 
     private let callback: (() -> ())?
     var type: ActionButtonType?
