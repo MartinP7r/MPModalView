@@ -22,14 +22,14 @@ public class ActionButton: UIButton {
 
     private let bgColor: UIColor
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         bgColor = .white
         callback = nil
         super.init(frame: frame)
         setupView()
     }
 
-    init(frame: CGRect = .zero,
+    public init(frame: CGRect = .zero,
          title: String,
          bgColor: UIColor,
          _ callback: @escaping () -> Void = { }) {
@@ -42,7 +42,7 @@ public class ActionButton: UIButton {
         setupCallback()
     }
 
-    convenience init(type buttonType: ActionButtonType, _ callback: @escaping () -> Void = { }) {
+    public convenience init(type buttonType: ActionButtonType, _ callback: @escaping () -> Void = { }) {
         switch buttonType {
         case .ok:
             self.init(title: "OK", bgColor: .blue, callback)

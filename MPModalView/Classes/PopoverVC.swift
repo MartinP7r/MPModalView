@@ -18,12 +18,12 @@ public class PopoverVC: UIViewController {
     // MARK: - Properties
 
     // MARK: - View Elements
-    let contentView: UIView
+    public let contentView: UIView
     private let frameView = UIView()
     private let shadowView = UIView()
     private let stack = UIStackView()
     private let buttonStack = UIStackView()
-    private(set) var buttons: [ActionButton]
+    public private(set) var buttons: [ActionButton]
 
     // MARK: - Initialization
     public init(actionButtons: [ActionButton],
@@ -87,7 +87,7 @@ public class PopoverVC: UIViewController {
         }
     }
 
-    func presentOnTop() {
+    public func presentOnTop() {
         let alertWindow = UIWindow(frame: UIScreen.main.bounds)
         alertWindow.rootViewController = UIViewController()
         alertWindow.windowLevel =  UIWindow.Level.alert + 1.0
@@ -98,12 +98,12 @@ public class PopoverVC: UIViewController {
                                                 completion: nil)
     }
 
-    func addActionButton(button: ActionButton) {
+    public func addActionButton(button: ActionButton) {
         buttons.append(button)
         buttonStack.addArrangedSubview(button)
     }
 
-    func removeActionButton(button: ActionButton) {
+    public func removeActionButton(button: ActionButton) {
         guard let idx = buttons.index(of: button) else { return }
         buttonStack.removeArrangedSubview(button)
         buttons.remove(at: idx)
@@ -167,7 +167,7 @@ fileprivate extension PopoverVC {
         stack.fillSuperview()
     }
 
-    private func setupShadow() {
+    func setupShadow() {
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOpacity = 0.7
         shadowView.layer.cornerRadius = 8
