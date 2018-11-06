@@ -13,7 +13,7 @@ public class ActionButton: UIButton {
     private let callback: (() -> ())?
     var type: ActionButtonType?
 
-    enum ActionButtonType { case
+    public enum ActionButtonType { case
         ok,
         cancel,
         basic(title: String),
