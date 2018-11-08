@@ -48,7 +48,7 @@ class MPModalViewControllerTests: XCTestCase {
     }
 
     func currentViewController() -> UIViewController? {
-        return UIApplication.shared.keyWindow?.rootViewController
+        return UIApplication.shared.keyWindow?.rootViewController?.presentedViewController
     }
 
     func testModal_isTopViewControllerWhenCalled() {
