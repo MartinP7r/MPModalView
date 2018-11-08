@@ -21,7 +21,7 @@ pod 'MPModalView'
 
 ## Author
 
-Martin Pfundmair, github@mycyrus.com
+Martin Pfundmair, github@martin.pfundmair.de
 
 ## License
 
