@@ -14,11 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
-        //        let modal = PopoverVC(actionButtons: [ActionButton(type: .basic(title: "Bla")),
-        //                                              ActionButton(type: .cancel),
-        //                                              ActionButton(type: .basic(title: "Blu"))],
-        //                              contentView: .text(title: "A", body: "B"))
-        //        modal.presentOnTop()
     }
 
     func setupButtons() {
@@ -47,20 +42,20 @@ class ViewController: UIViewController {
     }
 
     @objc func showOKBtnModal(sender: UIButton) {
-        let modal = PopoverVC(actionButtons: [ActionButton(type: .ok)],
+        let modal = MPModalViewController(actionButtons: [ActionButton(type: .ok)],
                               contentView: .text(title: "Modal", body: "with one OK button"))
         modal.presentOnTop()
     }
 
     @objc func showOKCancelBtnModal(sender: UIButton) {
-        let modal = PopoverVC(actionButtons: [ActionButton(type: .cancel, { self.dismiss(animated: true) }),
+        let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel, { self.dismiss(animated: true) }),
                                               ActionButton(type: .ok)],
                               contentView: .text(title: "Modal", body: "with OK & Cancel button"))
         modal.presentOnTop()
     }
 
     @objc func showNOBtnModal(sender: UIButton) {
-        let modal = PopoverVC(actionButtons: [],
+        let modal = MPModalViewController(actionButtons: [],
                               contentView: .text(title: "Modal", body: "without buttons"))
         modal.presentOnTop()
     }

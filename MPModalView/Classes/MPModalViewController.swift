@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PopoverVC: UIViewController {
+public class MPModalViewController: UIViewController {
 
     public enum ContentViewType { case
         text(title: String, body: String),
@@ -40,13 +40,13 @@ public class PopoverVC: UIViewController {
             let lblTitle = UILabel()
             lblTitle.text = title
             lblTitle.numberOfLines = 0
-//            lblTitle.font = Style.font(.bold, size: .large)
+            lblTitle.font = UIFont.boldSystemFont(ofSize: 17)
             lblTitle.textAlignment = .center
             lblTitle.setContentHuggingPriority(.defaultHigh, for: .vertical)
 
             let lblBody = UILabel()
             lblBody.numberOfLines = 0
-//            lblBody.font = Style.font(.basic, size: .standard)
+            lblBody.font = UIFont.systemFont(ofSize: 15)
             lblBody.text = body
             lblBody.setContentHuggingPriority(.defaultHigh, for: .vertical)
 
@@ -87,6 +87,7 @@ public class PopoverVC: UIViewController {
         }
     }
 
+    /// Presents the modal view on top of everything else on the screen
     public func presentOnTop() {
         let alertWindow = UIWindow(frame: UIScreen.main.bounds)
         alertWindow.rootViewController = UIViewController()
@@ -111,7 +112,7 @@ public class PopoverVC: UIViewController {
 }
 
 // MARK: - Private Methods
-fileprivate extension PopoverVC {
+fileprivate extension MPModalViewController {
 
     // MARK: View Setup
     func setupSubViews() {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08DD510866DDA94C1F72D3C1BB1BCB8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		399AD6C921915A3200471D4C /* PopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6C721915A3200471D4C /* PopoverVC.swift */; };
+		399AD6C921915A3200471D4C /* MPModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6C721915A3200471D4C /* MPModalViewController.swift */; };
 		399AD6CA21915A3200471D4C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6C821915A3200471D4C /* ActionButton.swift */; };
 		399AD6CD21916FF300471D4C /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */; };
 		399AD6CE21916FF300471D4C /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AD6CC21916FF300471D4C /* UIView+Anchors.swift */; };
@@ -45,7 +45,7 @@
 		14960A676458ECC5F22719683C8BB2AF /* Pods-MPModalView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MPModalView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1FB2FC66617ABD95E3B551AD1A4B56B0 /* Pods-MPModalView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MPModalView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		264E1E8C6275D64C9E1592D31B1BF4E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		399AD6C721915A3200471D4C /* PopoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverVC.swift; path = MPModalView/Classes/PopoverVC.swift; sourceTree = "<group>"; };
+		399AD6C721915A3200471D4C /* MPModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MPModalViewController.swift; path = MPModalView/Classes/MPModalViewController.swift; sourceTree = "<group>"; };
 		399AD6C821915A3200471D4C /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionButton.swift; path = MPModalView/Classes/ActionButton.swift; sourceTree = "<group>"; };
 		399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+SafeArea.swift"; path = "MPModalView/Classes/UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		399AD6CC21916FF300471D4C /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Anchors.swift"; path = "MPModalView/Classes/UIView+Anchors.swift"; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				399AD6C821915A3200471D4C /* ActionButton.swift */,
-				399AD6C721915A3200471D4C /* PopoverVC.swift */,
+				399AD6C721915A3200471D4C /* MPModalViewController.swift */,
 				399AD6CC21916FF300471D4C /* UIView+Anchors.swift */,
 				399AD6CB21916FF300471D4C /* UIView+SafeArea.swift */,
 				2A72B2035A7ABEAC49CED74792FB770E /* Pod */,
@@ -334,6 +334,9 @@
 					370FBE96FCFD782B3962A5FB7EEBCBE4 = {
 						LastSwiftMigration = 1010;
 					};
+					E1CDEE2E5D399336F553085CB9E923F6 = {
+						LastSwiftMigration = 1000;
+					};
 				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -393,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				399AD6CD21916FF300471D4C /* UIView+SafeArea.swift in Sources */,
-				399AD6C921915A3200471D4C /* PopoverVC.swift in Sources */,
+				399AD6C921915A3200471D4C /* MPModalViewController.swift in Sources */,
 				399AD6CE21916FF300471D4C /* UIView+Anchors.swift in Sources */,
 				99A83F91A681A1242A28A47685C8AB16 /* MPModalView-dummy.m in Sources */,
 				399AD6CA21915A3200471D4C /* ActionButton.swift in Sources */,
@@ -497,6 +500,7 @@
 			baseConfigurationReference = 14960A676458ECC5F22719683C8BB2AF /* Pods-MPModalView_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -519,6 +523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -725,6 +730,7 @@
 			baseConfigurationReference = 5028B951F1A48F7DE9DE29AF5B7E7B75 /* Pods-MPModalView_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -747,6 +753,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
