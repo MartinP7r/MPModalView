@@ -6,7 +6,7 @@
 
 ## Example
 
-![](screencapture.gif)
+![](https://github.com/cyrus86/MPModalView/blob/master/screencapture.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
