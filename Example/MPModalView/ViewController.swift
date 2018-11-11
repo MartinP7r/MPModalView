@@ -24,18 +24,22 @@ class ViewController: UIViewController {
         let btnNoBtnModal = UIButton(type: .roundedRect)
         btnNoBtnModal.setTitle("without buttons", for: .normal)
         let btnMoreBtnModal = UIButton(type: .roundedRect)
-        btnMoreBtnModal.setTitle("without more buttons", for: .normal)
+        btnMoreBtnModal.setTitle("with more buttons", for: .normal)
+        let btnCustomViewModal = UIButton(type: .roundedRect)
+        btnCustomViewModal.setTitle("with custom content", for: .normal)
 
         btnOkModal.addTarget(self, action: #selector(showOKBtnModal(sender:)), for: .touchUpInside)
         btnOkCancelModal.addTarget(self, action: #selector(showOKCancelBtnModal(sender:)), for: .touchUpInside)
         btnNoBtnModal.addTarget(self, action: #selector(showNOBtnModal(sender:)), for: .touchUpInside)
         btnMoreBtnModal.addTarget(self, action: #selector(showMoreBtnModal(sender:)), for: .touchUpInside)
+        btnCustomViewModal.addTarget(self, action: #selector(showCustomModal(sender:)), for: .touchUpInside)
 
         let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 120, height: 350))
         stackView.addArrangedSubview(btnOkCancelModal)
         stackView.addArrangedSubview(btnMoreBtnModal)
         stackView.addArrangedSubview(btnNoBtnModal)
         stackView.addArrangedSubview(btnOkModal)
+        stackView.addArrangedSubview(btnCustomViewModal)
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.spacing = 10
@@ -71,6 +75,23 @@ class ViewController: UIViewController {
                                                           ActionButton(title: "D", bgColor: .black)],
                                           contentView: .text(title: "Modal",
                                                              body: "with more buttons buttons"))
+        modal.presentOnTop()
+    }
+
+    @objc func showCustomModal(sender: UIButton) {
+        let view = UIView()
+        view.backgroundColor = .red
+        let lbl = UILabel()
+        lbl.textColor = .white
+        lbl.text = "A custom view"
+        view.addSubview(lbl)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        lbl.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+
+        let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel)],
+                                          contentView: .custom(view))
+
         modal.presentOnTop()
     }
 }
