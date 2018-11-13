@@ -16,6 +16,7 @@ public class MPModalViewController: UIViewController {
     }
 
     // MARK: - Properties
+    private var variableHeight: Bool
 
     // MARK: - View Elements
     public let contentView: UIView
@@ -28,8 +29,10 @@ public class MPModalViewController: UIViewController {
     // MARK: - Initialization
     public init(actionButtons: [ActionButton],
          contentView: ContentViewType,
-         hasShadow: Bool = true) {
+         hasShadow: Bool = true,
+         variableHeight: Bool = true) {
         self.buttons = actionButtons
+        self.variableHeight = variableHeight
 
         switch contentView {
         case .custom(let view):
@@ -126,9 +129,8 @@ fileprivate extension MPModalViewController {
         shadowView.translatesAutoresizingMaskIntoConstraints = false
         shadowView.widthAnchor.constraint(equalTo: view.widthAnchor,
                                           multiplier: 0.8).isActive = true
-        // TODO: adjust size to body length? if text only (need to deactivate height constraint)
         shadowView.heightAnchor.constraint(equalTo: view.heightAnchor,
-                                           multiplier: 0.8).isActive = true
+                                           multiplier: 0.8).isActive = !variableHeight
         shadowView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         shadowView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 

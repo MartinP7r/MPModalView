@@ -90,7 +90,8 @@ class ViewController: UIViewController {
         lbl.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel)],
-                                          contentView: .custom(view))
+                                          contentView: .custom(view),
+                                          variableHeight: false)
 
         modal.presentOnTop()
     }
