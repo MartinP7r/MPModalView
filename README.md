@@ -21,6 +21,15 @@ it, simply add the following line to your Podfile:
 pod 'MPModalView'
 ```
 
+## Usage
+
+```swift
+let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel),
+                                                  ActionButton(type: .ok) { print("some callback") }],
+                                  contentView: .text(title: "Modal", body: "with OK & Cancel button"))
+modal.presentOnTop()
+```
+
 ## Author
 
 Martin Pfundmair, github@martin.pfundmair.de

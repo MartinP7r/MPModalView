@@ -47,7 +47,7 @@ public class ActionButton: UIButton {
         case .ok:
             self.init(title: "OK", bgColor: .blue, callback)
         case .cancel:
-            self.init(title: "Cancel", bgColor: .red, callback)
+            self.init(title: "Cancel", bgColor: .red)
         case .basic(let title):
             self.init(title: title, bgColor: .blue, callback)
         case .custom(let title, let bgColor):

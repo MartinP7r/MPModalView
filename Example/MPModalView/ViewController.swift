@@ -56,8 +56,8 @@ class ViewController: UIViewController {
     }
 
     @objc func showOKCancelBtnModal(sender: UIButton) {
-        let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel, { self.dismiss(animated: true) }),
-                                                          ActionButton(type: .ok)],
+        let modal = MPModalViewController(actionButtons: [ActionButton(type: .cancel),
+                                                          ActionButton(type: .ok) { print("some callback") }],
                                           contentView: .text(title: "Modal", body: "with OK & Cancel button"))
         modal.presentOnTop()
     }
